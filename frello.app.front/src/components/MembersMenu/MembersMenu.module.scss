@@ -1,0 +1,47 @@
+.members {
+  .head {
+    span {
+      display: block;
+      margin: 0 auto;
+      width: max-content;
+      color: #5e6c84;
+      font-size: 16px;
+    }
+  }
+
+  .title {
+    color: #5e6c84;
+    margin-top: 16px;
+    margin-bottom: 5px;
+    font-size: 14px;
+    font-weight: 500;
+  }
+
+  .membersList {
+    max-height: 300px;
+    overflow-y: auto;
+
+    .member {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 6px 0;
+      cursor: pointer;
+
+      .name {
+        pointer-events: none;
+        display: block;
+      }
+
+      .button {
+        background-color: rgba(242, 38, 19, 0.8);
+        border-radius: 4px;
+        transition: background-color 0.2s;
+
+        &:hover {
+          background-color: rgba(242, 38, 19, 0.6);
+        }
+      }
+    }
+  }
+}

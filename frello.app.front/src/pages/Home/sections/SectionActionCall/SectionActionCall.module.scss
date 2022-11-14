@@ -1,0 +1,20 @@
+@import "../../../../styles/scss/variables.scss";
+@import "../../../../styles/scss/mixins.scss";
+
+.action {
+  border-radius: 10px;
+  padding: 30px 40px;
+  background: $last-section-gradient;
+  text-align: center;
+
+  h3 {
+    font-weight: 400;
+    color: $light-txt-color;
+  }
+
+  @include sm-screen {
+    h3 {
+      font-size: 20px;
+    }
+  }
+}

@@ -1,0 +1,40 @@
+@import "../../styles/scss/variables.scss";
+
+.form {
+  width: 400px;
+  margin: 0 auto;
+  padding: 40px 30px;
+  border-radius: 4px;
+  box-shadow: $header-box-shadow;
+  background-color: $form-bc-color;
+
+  .title {
+    margin-bottom: 20px;
+    text-align: center;
+    color: $secondary-txt-color;
+  }
+
+  .inputs {
+    display: flex;
+    flex-direction: column;
+    gap: 16px 0;
+  }
+
+  .hr {
+    margin: 30px 0;
+  }
+
+  .links {
+    display: flex;
+
+    a {
+      font-size: 14px;
+      font-weight: 300;
+      color: $links-color;
+
+      &:hover {
+        text-decoration: underline;
+      }
+    }
+  }
+}

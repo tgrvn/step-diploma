@@ -1,0 +1,46 @@
+//text-colors
+$primary-txt-color: #091e42;
+$secondary-txt-color: #172B4D;
+$light-txt-color: #fff;
+$dark-blue: #5e6c84;
+$links-color: #0747a6;
+
+//btn-colors
+$primary-btn-txt-color: #fff;
+$secondary-btn-txt-color: #5e6c84;
+$primary-btn-color: #0065ff;
+$secondary-btn-color: #0747a6;
+$white-btn-color: #fff;
+
+//input-colors
+$input-border-color: #e7e9ed;
+$input-outline-color: #0747a6;
+
+// header
+$header-bc-color: #fff;
+$header-box-shadow: rgb(9 30 66 / 15%) 0 6px 12px 0;
+
+// home
+$welcome-section-gradient: linear-gradient(
+  rgb(234, 230, 255),
+  rgb(255, 255, 255)
+);
+$last-section-gradient: linear-gradient(rgb(64, 50, 148), rgb(76, 154, 255));
+
+// auth
+$form-bc-color: #fff;
+$auth-bc-color: #f9fafc;
+
+$dashboard-bc-color: #fafbfc;
+
+// board
+$primary-board-txt-color: #5e6c84;
+$secondary-board-txt-color: #172b4d;
+$primary-column-color: #ebecf0;
+
+//fade
+$primary-card-fade-color: #00000035;
+$secondary-card-fade-color: #00000021;
+
+// error
+$error-background-color: #ef5350;

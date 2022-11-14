@@ -1,0 +1,17 @@
+@import "../../styles/scss/variables.scss";
+
+.background {
+  position: fixed;
+  top: 0;
+  z-index: -1;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  width: 100vw;
+  height: 100vh;
+  background-color: $auth-bc-color;
+
+  img {
+    width: 25%;
+  }
+}

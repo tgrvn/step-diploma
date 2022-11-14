@@ -1,0 +1,17 @@
+@import "../../../styles/scss/variables.scss";
+
+.input {
+  padding: 8px 10px;
+  width: 100%;
+  border-radius: 2px;
+  outline: 2.3px solid $input-border-color;
+  background-color: $auth-bc-color;
+  font-weight: 300;
+  font-size: 14px;
+  border: 0;
+  transition: outline 0.2s linear;
+
+  &:focus {
+    outline-color: $input-outline-color;
+  }
+}

@@ -1,0 +1,55 @@
+@import "../../../../styles/scss/variables.scss";
+@import "../../../../styles/scss/mixins.scss";
+
+.features {
+  .cards {
+    display: flex;
+    flex-direction: column;
+    gap: 70px 0;
+
+    .card {
+      display: flex;
+      align-items: flex-start;
+      justify-content: space-between;
+
+      &:nth-child(even) {
+        flex-direction: row-reverse;
+      }
+
+      .content {
+        width: 60%;
+      }
+
+      img {
+        width: 35%;
+      }
+    }
+
+    @include sm-screen {
+      .card {
+        flex-direction: column-reverse;
+        align-items: center;
+
+        &:nth-child(even) {
+          flex-direction: column-reverse;
+        }
+
+        img {
+          width: 400px;
+        }
+
+        .content {
+          width: 100%;
+
+          h3 {
+            font-size: 18px;
+          }
+
+          p {
+            font-size: 14px;
+          }
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,42 @@
+.checkbox {
+  margin-top: 3px;
+  width: 16px;
+  height: 16px;
+
+  label {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    outline: 3px solid #dfe1e6;
+    border-radius: 0.5px;
+    cursor: pointer;
+    transition: 0.3s;
+
+    &::after {
+      content: "\f00c";
+      display: none;
+      font-family: "icomoon";
+      color: #fff;
+      font-size: 12px;
+    }
+  }
+
+  input:checked ~ label {
+    background-color: #0079bf;
+    outline: 3px solid #0079bf;
+
+    &::after {
+      display: block;
+    }
+  }
+
+  input:checked:hover ~ label {
+    filter: brightness(1.2);
+  }
+
+  input:not(:checked):hover ~ label {
+    background-color: #ebecf0;
+  }
+}

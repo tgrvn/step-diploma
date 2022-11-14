@@ -1,0 +1,23 @@
+@import "../../../styles/scss/variables.scss";
+
+.textarea {
+  display: block;
+  padding: 8px 10px;
+  border-radius: 2px;
+  width: 100%;
+  outline: 2px solid $secondary-txt-color;
+  transition: outline-color 0.2s linear;
+  word-wrap: break-word;
+  overflow: hidden;
+  resize: none;
+  font-size: 16px;
+
+  &::placeholder {
+    font-size: 16px;
+    opacity: 0.5; 
+  }
+
+  &:focus {
+    outline-color: $primary-btn-color;
+  }
+}

@@ -1,0 +1,64 @@
+@import "../../styles/scss/variables.scss";
+
+.card {
+  padding: 6px 10px;
+  border-radius: 5px;
+  background-color: #ffffff;
+  box-shadow: $header-box-shadow;
+  cursor: pointer;
+  transition: background-color 0.3s;
+
+  &:hover {
+    background-color: #e4e6ea;
+  }
+
+  h6 {
+    margin-bottom: 8px;
+    font-size: 16px;
+    font-weight: 400;
+  }
+
+  .stat {
+    display: flex;
+    align-items: stretch;
+    gap: 20px;
+
+    .comments,
+    .checklists,
+    .members {
+      position: relative;
+      font-weight: 500;
+      font-size: 15px;
+      padding-left: 18px;
+      line-height: normal;
+      height: 14px;
+      line-height: 14px;
+
+      &::before {
+        font-family: "icomoon";
+        font-size: 14;
+        position: absolute;
+        left: 0;
+        bottom: 0;
+      }
+    }
+
+    .comments {
+      &::before {
+        content: "\f0e5";
+      }
+    }
+
+    .checklists {
+      &::before {
+        content: "\f046";
+      }
+    }
+
+    .members {
+      &::before {
+        content: "\f2c0";
+      }
+    }
+  }
+}
