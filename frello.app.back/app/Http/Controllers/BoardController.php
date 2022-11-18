@@ -143,7 +143,7 @@ class BoardController extends Controller
         });
 
         if ($user->id == $premission->user_id) {
-            return response()->json()->error(401, "failure", ["message" => "you cant delete yourself"]);
+            return response()->json()->error(401, "failure", ["message" => "you can't delete yourself"]);
         }
 
         $premission->delete();
