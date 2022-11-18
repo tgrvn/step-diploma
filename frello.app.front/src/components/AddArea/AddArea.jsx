@@ -14,7 +14,6 @@ export default function AddArea({
   state,
 }) {
   const [isCreating, setIsCreating] = useState(false);
-  const textAreaRef = useRef();
   const ref = useRef();
 
   useClickOutside(ref, () => setIsCreating(false));

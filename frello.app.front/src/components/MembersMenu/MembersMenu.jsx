@@ -13,8 +13,6 @@ export default function MembersMenu({
   const [memberState, setMemberState] = useState([...boardMembers]);
   const user = JSON.parse(localStorage.getItem("user"));
 
-  console.log(members);
-
   useEffect(() => {
     setMemberState([...boardMembers]);
 

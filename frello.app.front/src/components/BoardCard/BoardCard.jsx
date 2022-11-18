@@ -9,7 +9,7 @@ export default function BoardCard({ board, event }) {
       className={styles.card}
       onClick={event}
       style={
-        theme.type == "background"
+        theme.type === "background"
           ? { backgroundImage: `url("${theme.img_path}")` }
           : { backgroundColor: `${theme.hex}` }
       }

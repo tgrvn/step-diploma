@@ -10,5 +10,5 @@ export function useAuthChecker() {
     if (!isLoggedIn) {
       navigate("/welcome");
     }
-  }, [isLoggedIn]);
+  }, [isLoggedIn, navigate]);
 }
