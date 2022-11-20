@@ -1,8 +1,8 @@
 import React, { useRef, useState } from "react";
-import { useClickOutside } from "../../hooks/useClickOutside";
-import AddButton from "../ui/add-button/AddButton";
-import Button from "../ui/button/Button";
-import Textarea from "../ui/textarea/Textarea";
+import { useClickOutside } from "hooks/useClickOutside";
+import AddButton from "components/ui/add-button/AddButton";
+import Button from "components/ui/button/Button";
+import Textarea from "components/ui/textarea/Textarea";
 import styles from "./AddArea.module.scss";
 
 export default function AddArea({

@@ -1,6 +1,6 @@
 import React from "react";
 import { useSelector } from "react-redux";
-import CreateMenu from "../ui/create-menu/CreateMenu";
+import CreateMenu from "../BoardMenu/BoardMenu";
 import PopOver from "../PopOver/PopOver";
 import UrlInvite from "../UrlInviteMenu/UrlInvite";
 import Button from "../ui/button/Button";

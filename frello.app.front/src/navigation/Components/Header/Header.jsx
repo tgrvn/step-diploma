@@ -1,21 +1,24 @@
 import React from "react";
+import { useDispatch, useSelector } from "react-redux";
 import { NavLink } from "react-router-dom";
-import BurgerMenu from "../ui/burger-menu/BurgerMenu";
-import { useScrollPosition } from "../../hooks/useScrollPosition";
-import logo from "../../assets/logo.svg";
+import { LOGIN, SIGNUP, DASHBOARD, WELCOME } from "navigation/CONSTANTS";
+import { logout } from "slices/auth";
+import { useScrollPosition } from "hooks/useScrollPosition";
+import logo from "assets/logo.svg";
+import BurgerMenu from "navigation/Components/BurgerMenu/BurgerMenu";
 import styles from "./Header.module.scss";
-import { useDispatch } from "react-redux";
-import { logout } from "../../slices/auth";
 
-export default function Header({ auth }) {
+export default function Header() {
   const [scrollY] = useScrollPosition();
+
   const dispatch = useDispatch();
+  const { isLoggedIn } = useSelector((state) => state.auth);
 
   let navlinks = [
-    <NavLink key={1} to={"/login"} className={styles.login}>
+    <NavLink key={1} to={LOGIN} className={styles.login}>
       увійти
     </NavLink>,
-    <NavLink key={2} to={"/signup"} className={styles.register}>
+    <NavLink key={2} to={SIGNUP} className={styles.register}>
       зареєструватися
     </NavLink>,
   ];
@@ -24,7 +27,7 @@ export default function Header({ auth }) {
     dispatch(logout());
   }
 
-  if (auth) {
+  if (isLoggedIn) {
     navlinks = [
       <button key={1} onClick={handleLogout} className={styles.login}>
         Вийти
@@ -40,12 +43,12 @@ export default function Header({ auth }) {
       }
     >
       <div className={styles.container}>
-        <NavLink to={auth ? "/dashboard" : "/welcome"}>
+        <NavLink to={isLoggedIn ? DASHBOARD : WELCOME}>
           <img src={logo} alt="frello" />
         </NavLink>
 
         <nav className={styles.nav}>
-          <BurgerMenu auth={auth} links={navlinks} />
+          <BurgerMenu auth={isLoggedIn} />
           {navlinks && navlinks.map((link, i) => link)}
         </nav>
       </div>

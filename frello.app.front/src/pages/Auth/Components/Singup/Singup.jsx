@@ -1,10 +1,10 @@
-import React, { useEffect } from "react";
-import { useState } from "react";
+import React, { useEffect, useState } from "react";
 import { useDispatch, useSelector } from "react-redux";
-import { singup } from "../../slices/auth";
-import Form from "../../components/Form/Form";
 import { useNavigate } from "react-router-dom";
-import { clearMessage } from "../../slices/message";
+import { LOGIN, DASHBOARD } from "navigation/CONSTANTS";
+import { singup } from "slices/auth";
+import { clearMessage } from "slices/message";
+import Form from "pages/Auth/Components/Form/Form";
 
 export default function Singup() {
   const form = {
@@ -45,7 +45,7 @@ export default function Singup() {
     },
     links: [
       {
-        to: "/login",
+        to: LOGIN,
         text: "У вас уже є акаунт? Увійдіть",
       },
     ],
@@ -66,7 +66,7 @@ export default function Singup() {
 
   useEffect(() => {
     if (isLoggedIn) {
-      navigate("/dashboard");
+      navigate(DASHBOARD);
     }
 
     dispatch(clearMessage());
@@ -76,7 +76,7 @@ export default function Singup() {
     dispatch(singup(initialValues));
 
     if (isLoggedIn) {
-      navigate("/dashboard");
+      navigate(DASHBOARD);
     }
   }
 

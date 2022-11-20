@@ -1,8 +1,8 @@
 import React from "react";
 import { NavLink } from "react-router-dom";
-import Button from "../ui/button/Button";
-import ErrorMessage from "../ui/error-message/ErrorMessage";
-import Input from "../ui/input/Input";
+import Button from "components/ui/button/Button";
+import ErrorMessage from "components/ui/error-message/ErrorMessage";
+import Input from "components/ui/input/Input";
 import styles from "./Form.module.scss";
 
 export default function Form({ form, errors }) {

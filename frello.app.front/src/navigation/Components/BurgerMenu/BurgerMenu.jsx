@@ -1,8 +1,9 @@
 import { useState } from "react";
 import { useDispatch } from "react-redux";
 import { NavLink } from "react-router-dom";
-import { useWindowSize } from "../../../hooks/useWindowSize";
-import { logout } from "../../../slices/auth";
+import { LOGIN, SIGNUP } from "navigation/CONSTANTS";
+import { logout } from "slices/auth";
+import { useWindowSize } from "hooks/useWindowSize";
 import styles from "./BurgerMenu.module.scss";
 
 function BurgerMenu({ auth }) {
@@ -15,10 +16,10 @@ function BurgerMenu({ auth }) {
   }
 
   let navlinks = [
-    <NavLink key={1} to={"/login"} className={styles.login}>
+    <NavLink key={1} to={LOGIN} className={styles.login}>
       увійти
     </NavLink>,
-    <NavLink key={2} to={"/signup"} className={styles.register}>
+    <NavLink key={2} to={SIGNUP} className={styles.register}>
       зареєструватися
     </NavLink>,
   ];

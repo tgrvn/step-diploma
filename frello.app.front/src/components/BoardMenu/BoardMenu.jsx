@@ -1,15 +1,15 @@
 import React, { useState, useRef } from "react";
 import { useDispatch } from "react-redux";
-import { useClickOutside } from "../../../hooks/useClickOutside";
-import Button from "../button/Button";
-import Input from "../input/Input";
-import preview from "../../../assets/preview.svg";
-import one from "../../../assets/test/bc_01.jpg";
-import two from "../../../assets/test/bc_02.jpg";
-import three from "../../../assets/test/bc_03.jpg";
-import four from "../../../assets/test/bc_04.jpg";
-import styles from "./CreateMenu.module.scss";
 import { useParams } from "react-router-dom";
+import { useClickOutside } from "hooks/useClickOutside";
+import Button from "components/ui/button/Button";
+import Input from "components/ui/input/Input";
+import preview from "assets/preview.svg";
+import one from "assets/test/bc_01.jpg";
+import two from "assets/test/bc_02.jpg";
+import three from "assets/test/bc_03.jpg";
+import four from "assets/test/bc_04.jpg";
+import styles from "./BoardMenu.module.scss";
 
 const theme = {
   backgrounds: [
@@ -28,7 +28,7 @@ const theme = {
   ],
 };
 
-export default function CreateMenu({
+export default function BoardMenu({
   head,
   visible,
   setVisible,
@@ -39,9 +39,9 @@ export default function CreateMenu({
   btnTitle,
 }) {
   const { backgrounds, colors } = theme;
+  const { boardId } = useParams();
   const dispatch = useDispatch();
   const menu = useRef();
-  const { boardId } = useParams();
 
   useClickOutside(menu, () => {
     if (!!setVisible) {

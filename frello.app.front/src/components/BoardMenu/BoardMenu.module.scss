@@ -1,9 +1,9 @@
-@import "../../../styles/scss/variables.scss";
+@import "styles/scss/variables.scss";
 
 .create {
   padding: 15px 10px;
   width: 300px;
-  background-color: #dedede;
+  background-color: $popover-background;
   border-radius: 4px;
   opacity: 1;
   visibility: visible;

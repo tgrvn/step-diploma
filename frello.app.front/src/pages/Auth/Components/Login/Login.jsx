@@ -1,9 +1,10 @@
 import React, { useEffect, useState } from "react";
-import Form from "../../components/Form/Form";
-import { login } from "../../slices/auth";
 import { useDispatch, useSelector } from "react-redux";
 import { useNavigate } from "react-router-dom";
-import { clearMessage } from "../../slices/message";
+import { clearMessage } from "slices/message";
+import { SIGNUP, DASHBOARD } from "navigation/CONSTANTS";
+import { login } from "slices/auth";
+import Form from "pages/Auth/Components/Form/Form";
 
 export default function Login() {
   const form = {
@@ -27,10 +28,7 @@ export default function Login() {
       event: handleLogin,
       styles: { padding: "8px 10px", width: "100%", marginTop: 30 },
     },
-    links: [
-      // { to: "/", text: "Не можете увійти?" },
-      { to: "/signup", text: "Зареєструвати аккаунт" },
-    ],
+    links: [{ to: SIGNUP, text: "Зареєструвати аккаунт" }],
     linksStyle: { justifyContent: "center" },
   };
 
@@ -47,7 +45,7 @@ export default function Login() {
 
   useEffect(() => {
     if (isLoggedIn) {
-      navigate("/dashboard");
+      navigate(DASHBOARD);
     }
 
     dispatch(clearMessage());
@@ -57,7 +55,7 @@ export default function Login() {
     dispatch(login(initialValues));
 
     if (isLoggedIn) {
-      navigate("/dashboard");
+      navigate(DASHBOARD);
     }
   }
 

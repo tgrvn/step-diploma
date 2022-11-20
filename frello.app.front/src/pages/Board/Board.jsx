@@ -1,14 +1,14 @@
 import React, { useEffect, useState } from "react";
-import styles from "./Board.module.scss";
-import { DragDropContext, Droppable } from "react-beautiful-dnd";
-import Column from "../../components/Column/Column";
-import { useAuthChecker } from "../../hooks/useAuthChecker";
-import { Outlet, useParams } from "react-router-dom";
 import { useDispatch, useSelector } from "react-redux";
-import { board, createColumn, updateIndexes } from "../../slices/board";
-import boardService from "../../services/board.service";
-import BoardNav from "../../components/BoardNav/BoardNav";
-import AddArea from "../../components/AddArea/AddArea";
+import { Outlet, useParams } from "react-router-dom";
+import { DragDropContext, Droppable } from "react-beautiful-dnd";
+import styles from "./Board.module.scss";
+import Column from "components/Column/Column";
+import { useAuthChecker } from "hooks/useAuthChecker";
+import { board, createColumn, updateIndexes } from "slices/board";
+import boardService from "services/board.service";
+import BoardNav from "components/BoardNav/BoardNav";
+import AddArea from "components/AddArea/AddArea";
 
 function reorder(list, startIndex, endIndex) {
   const [removed] = list.splice(startIndex, 1);

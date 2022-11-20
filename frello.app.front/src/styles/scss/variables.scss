@@ -1,6 +1,6 @@
 //text-colors
 $primary-txt-color: #091e42;
-$secondary-txt-color: #172B4D;
+$secondary-txt-color: #172b4d;
 $light-txt-color: #fff;
 $dark-blue: #5e6c84;
 $links-color: #0747a6;
@@ -31,6 +31,7 @@ $last-section-gradient: linear-gradient(rgb(64, 50, 148), rgb(76, 154, 255));
 $form-bc-color: #fff;
 $auth-bc-color: #f9fafc;
 
+// dashboard
 $dashboard-bc-color: #fafbfc;
 
 // board
@@ -44,3 +45,6 @@ $secondary-card-fade-color: #00000021;
 
 // error
 $error-background-color: #ef5350;
+
+// popover
+$popover-background: #dedede;

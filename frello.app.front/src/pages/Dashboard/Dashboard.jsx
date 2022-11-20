@@ -2,15 +2,13 @@ import React, { useEffect, useState } from "react";
 import { useNavigate } from "react-router-dom";
 import { useDispatch, useSelector } from "react-redux";
 import { boards } from "../../slices/dashboard";
-import { useAuthChecker } from "../../hooks/useAuthChecker";
 import BoardCard from "../../components/BoardCard/BoardCard";
 import CreateBoard from "../../components/CreateBoard/CreateBoard";
-import CreateMenu from "../../components/ui/create-menu/CreateMenu";
+import CreateMenu from "../../components/BoardMenu/BoardMenu";
 import styles from "./Dashboard.module.scss";
 import { createBoard } from "../../slices/board";
 
 export default function Dashboard() {
-  useAuthChecker();
   const navigate = useNavigate();
   const dispatch = useDispatch();
   const { dash } = useSelector((state) => state.dash);
