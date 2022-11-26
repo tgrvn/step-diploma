@@ -3,6 +3,7 @@
   top: 0;
   left: 0;
   z-index: 999;
+  padding: 0 10px;
   height: 100vh;
   width: 100%;
   background-color: RGBA(33, 33, 33, 0.7);
@@ -12,7 +13,7 @@
   .wrapper {
     margin: 40px auto;
     padding: 30px 60px;
-    width: 768px;
+    max-width: 768px;
     height: max-content;
     background-color: #f4f5f7;
     border-radius: 4px;
@@ -60,7 +61,13 @@
       padding-top: 20px;
       display: flex;
       justify-content: space-between;
+      flex-wrap: wrap;
       gap: 0 20px;
+
+      @media screen and (max-width: 500px) {
+        flex-direction: column-reverse;
+        gap: 20px 0;
+      }
 
       .main {
         flex-grow: 1;
@@ -105,9 +112,19 @@
           flex-direction: column;
           gap: 8px 0;
 
+          @media screen and (max-width: 500px) {
+            flex-direction: row;
+            justify-content: center;
+            align-items: stretch;
+            gap: 0 20px;
+          }
+
           .navitem {
             border-radius: 4px;
             background-color: #eaecf0;
+            display: flex;
+            align-items: center;
+            justify-content: center;
 
             &:hover {
               background-color: #e2e4e9;

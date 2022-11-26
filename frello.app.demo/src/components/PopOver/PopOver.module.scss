@@ -11,6 +11,10 @@
     font-size: 16px;
     line-height: 32px;
 
+    .text {
+      display: block;
+    }
+
     &:hover {
       background-color: rgba(255, 255, 255, 0.2);
     }
