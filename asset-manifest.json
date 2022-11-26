@@ -1,6 +1,6 @@
 {
   "files": {
-    "main.css": "/step-diploma/static/css/main.68fb33a0.css",
+    "main.css": "/step-diploma/static/css/main.37492b0f.css",
     "main.js": "/step-diploma/static/js/main.cbc07c74.js",
     "static/media/background.jpg": "/step-diploma/static/media/background.1f1c6122466a610c46b5.jpg",
     "static/media/icomoon.svg?xdx2bi": "/step-diploma/static/media/icomoon.2263fa5ac480292529c3.svg",
@@ -9,11 +9,11 @@
     "static/media/icomoon.woff?xdx2bi": "/step-diploma/static/media/icomoon.f3213301bc6ba81eae32.woff",
     "static/media/icomoon.ttf?xdx2bi": "/step-diploma/static/media/icomoon.2dd72a47fa8a1cd9418c.ttf",
     "index.html": "/step-diploma/index.html",
-    "main.68fb33a0.css.map": "/step-diploma/static/css/main.68fb33a0.css.map",
+    "main.37492b0f.css.map": "/step-diploma/static/css/main.37492b0f.css.map",
     "main.cbc07c74.js.map": "/step-diploma/static/js/main.cbc07c74.js.map"
   },
   "entrypoints": [
-    "static/css/main.68fb33a0.css",
+    "static/css/main.37492b0f.css",
     "static/js/main.cbc07c74.js"
   ]
 }
