@@ -1,0 +1,127 @@
+.checkList {
+  .head {
+    position: relative;
+    display: flex;
+    align-items: flex-start;
+    gap: 0 16px;
+
+    &::before {
+      content: "\f046";
+      position: absolute;
+      left: -30px;
+      width: 24px;
+      height: 24px;
+      font-family: "icomoon";
+    }
+  }
+
+  .task {
+    padding: 8px;
+    display: flex;
+    align-items: flex-start;
+    gap: 0 20px;
+    border-radius: 4px;
+    position: relative;
+    transition: background-color 0.2s;
+    cursor: pointer;
+
+    .tasksClose {
+      position: absolute;
+      display: none;
+      right: 8px;
+      top: 4px;
+      width: 16px;
+      height: 16px;
+      cursor: pointer;
+
+      &::before {
+        content: "\f00d";
+        font-family: "icomoon";
+      }
+    }
+
+    &:hover {
+      background-color: #eaecf0;
+
+      .tasksClose {
+        display: block;
+      }
+    }
+  }
+
+  .checkbox {
+    margin-top: 3px;
+    width: 16px;
+    height: 16px;
+
+    label {
+      position: relative;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100%;
+      outline: 3px solid #dfe1e6;
+      border-radius: 0.5px;
+      cursor: pointer;
+      transition: 0.3s;
+
+      &::after {
+        content: "\f00c";
+        display: none;
+        font-family: "icomoon";
+        color: #fff;
+        font-size: 12px;
+      }
+    }
+
+    input:checked ~ label {
+      background-color: #0079bf;
+      outline: 3px solid #0079bf;
+
+      &::after {
+        display: block;
+      }
+    }
+
+    input:checked:hover ~ label {
+      filter: brightness(1.2);
+    }
+
+    input:not(:checked):hover ~ label {
+      background-color: #ebecf0;
+    }
+  }
+
+  .progress {
+    position: relative;
+
+    .progressBar {
+      margin: 14px 0;
+      position: relative;
+      border-radius: 10px;
+      height: 8px;
+      background-color: #e2e4e9;
+
+      .fill {
+        border-radius: 5px 0 0 5px;
+        position: absolute;
+        top: 0;
+        left: 0;
+        height: inherit;
+        background-color: #5ba4cf;
+        width: 30%;
+        transition: 0.2s linear;
+        // transition: background-color 0.26s linear;
+      }
+    }
+
+    .percent {
+      position: absolute;
+      left: -30px;
+      font-size: 11px;
+      font-weight: 300;
+      top: 50%;
+      transform: translateY(-50%);
+    }
+  }
+}

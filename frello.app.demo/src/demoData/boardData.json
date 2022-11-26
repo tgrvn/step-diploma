@@ -1,0 +1,54 @@
+{
+  "id": 1,
+  "name": "ssss",
+  "theme": {
+    "type": "background",
+    "img_path": "http://127.0.0.1:8000/storage/assets/backgrounds/bc_01.jpg"
+  },
+  "columns": [
+    {
+      "id": 1,
+      "name": "TO DO",
+      "cards": [
+        {
+          "id": 1,
+          "column_id": 1,
+          "name": "Do the demo",
+          "members": 0,
+          "comments": 0,
+          "checklists": 1,
+          "cardData": {
+            "id": 1,
+            "name": "Do the demo",
+            "description": null,
+            "members": [],
+            "checklists": [
+              {
+                "id": 1,
+                "name": "test",
+                "tasks": [
+                  {
+                    "id": 1,
+                    "name": "test task",
+                    "is_done": false
+                  }
+                ]
+              }
+            ],
+            "comments": []
+          }
+        }
+      ]
+    },
+    {
+      "id": 2,
+      "name": "In process",
+      "cards": []
+    },
+    {
+      "id": 3,
+      "name": "DONE",
+      "cards": []
+    }
+  ]
+}

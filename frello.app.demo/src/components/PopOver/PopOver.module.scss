@@ -1,0 +1,35 @@
+.popOverWrapp {
+  position: relative;
+
+  .button {
+    padding: 2px 14px;
+    border-radius: 4px;
+    width: 100%;
+    transition: background-color 0.2s;
+    color: #fff;
+    font-weight: 300;
+    font-size: 16px;
+    line-height: 32px;
+
+    &:hover {
+      background-color: rgba(255, 255, 255, 0.2);
+    }
+  }
+
+  .popOver {
+    // overflow-y: auto;
+    position: absolute;
+    max-height: calc(100vh - 160px);
+    top: calc(100% + 8px);
+    left: 0;
+    padding: 15px 10px;
+    min-width: 300px;
+    border-radius: 4px;
+    background-color: #fff;
+    box-shadow: rgb(9 30 66 / 15%) 0 6px 12px 0;
+    z-index: 998;
+    .content {
+      width: 100%;
+    }
+  }
+}

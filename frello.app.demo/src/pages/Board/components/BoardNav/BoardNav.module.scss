@@ -1,0 +1,42 @@
+@import "styles/scss/variables.scss";
+
+.boardNav {
+  position: relative;
+  z-index: 998;
+  margin: 0 auto;
+  padding: 16px 20px;
+  padding-bottom: 0px;
+  width: 80%;
+  background-color: transparent;
+
+  .nav {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+
+    h4 {
+      color: #fff;
+    }
+
+    .navItems {
+      display: flex;
+      gap: 0 16px;
+
+      .navLink {
+        &:last-child {
+          padding: 2px 14px;
+          border-radius: 4px;
+          background-color: rgba(242, 38, 19, 0.4);
+          transition: background-color 0.2s;
+          color: #fff;
+          font-weight: 300;
+
+          &:hover {
+            background-color: rgba(242, 38, 19, 0.2);
+          }
+        }
+      }
+    }
+  }
+}
