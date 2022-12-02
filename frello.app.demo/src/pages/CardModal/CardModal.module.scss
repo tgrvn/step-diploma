@@ -61,10 +61,10 @@
       padding-top: 20px;
       display: flex;
       justify-content: space-between;
-      flex-wrap: wrap;
       gap: 0 20px;
 
       @media screen and (max-width: 600px) {
+        flex-wrap: wrap;
         flex-direction: column-reverse;
         gap: 20px 0;
       }

@@ -8,43 +8,53 @@
   "columns": [
     {
       "id": 1,
-      "name": "TO DO",
+      "name": "Що треба зробити",
       "cards": [
         {
           "id": 1,
           "column_id": 1,
-          "name": "Hello, i'm frello card",
+          "name": "Вітаю, я картка",
           "members": 0,
           "comments": 0,
           "checklists": 1,
           "cardData": {
             "id": 1,
-            "name": "Hello, i'm frello card",
-            "description": null,
+            "name": "Вітаю, я картка",
+            "description": "Перші кроки роботи з карткою",
             "members": [],
             "checklists": [
               {
                 "id": 1,
-                "name": "Things to do",
+                "name": "Що треба спробувати",
                 "tasks": [
                   {
                     "id": 1,
-                    "name": "Try to create a card",
+                    "name": "Клікнути по картці",
                     "is_done": true
                   },
                   {
-                    "id": 1,
-                    "name": "Try to create a column",
+                    "id": 2,
+                    "name": "Спробувати редагувати назву",
+                    "is_done": true
+                  },
+                  {
+                    "id": 3,
+                    "name": "Також спробувати редагувати опис",
+                    "is_done": true
+                  },
+                  {
+                    "id": 4,
+                    "name": "Ще треба створити новий чекліст",
                     "is_done": false
                   },
                   {
-                    "id": 1,
-                    "name": "Try to create a chelist",
+                    "id": 5,
+                    "name": "Та створити таски у чеклісті",
                     "is_done": false
                   },
                   {
-                    "id": 1,
-                    "name": "Mark task as done",
+                    "id": 6,
+                    "name": "Якщо усе зробленно, можно повідмічати таски як зробленні",
                     "is_done": false
                   }
                 ]
@@ -57,43 +67,38 @@
     },
     {
       "id": 2,
-      "name": "In process",
+      "name": "У процессі",
       "cards": [
         {
-          "id": 1,
-          "column_id": 1,
-          "name": "Hello i'm frello list",
+          "id": 2,
+          "column_id": 2,
+          "name": "Вітаю, я список",
           "members": 0,
           "comments": 0,
           "checklists": 1,
           "cardData": {
-            "id": 1,
-            "name": "Hello i'm frello list",
-            "description": null,
+            "id": 2,
+            "name": "Вітаю, я список",
+            "description": "Робота зі списками",
             "members": [],
             "checklists": [
               {
-                "id": 1,
-                "name": "Things to do",
+                "id": 2,
+                "name": "Що можно зробити",
                 "tasks": [
                   {
-                    "id": 1,
-                    "name": "Try to create a card",
-                    "is_done": true
-                  },
-                  {
-                    "id": 1,
-                    "name": "Try to create a column",
+                    "id": 7,
+                    "name": "Якщо були виконані таски з попередньої картки, можно перетягнути їх у колонку 'DONE'",
                     "is_done": false
                   },
                   {
-                    "id": 1,
-                    "name": "Try to create a chelist",
+                    "id": 8,
+                    "name": "Також можно постворювати нові картки у цьому списці",
                     "is_done": false
                   },
                   {
-                    "id": 1,
-                    "name": "Mark task as done",
+                    "id": 9,
+                    "name": "Ще можна змінити місцями ці списки",
                     "is_done": false
                   }
                 ]

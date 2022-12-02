@@ -13,7 +13,13 @@ export default function Navbar() {
         />
 
         <nav className={styles.nav}>
-          <a className={styles.navItem}>Повний проект на GitHub</a>
+          <a
+            className={styles.navItem}
+            href="https://github.com/tgrvn/step-diploma/tree/dev"
+            target={"_blank"}
+          >
+            Повний проект на GitHub
+          </a>
         </nav>
       </div>
     </header>

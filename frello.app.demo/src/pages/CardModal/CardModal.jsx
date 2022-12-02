@@ -114,8 +114,6 @@ export default function CardModal() {
                   ))
                 : null}
             </div>
-
-            <Comments comments={cardData?.comments} />
           </div>
 
           <div className={styles.aside}>
