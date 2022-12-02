@@ -1,9 +1,9 @@
 {
   "id": 1,
-  "name": "ssss",
+  "name": "Frello demo",
   "theme": {
     "type": "background",
-    "img_path": "http://127.0.0.1:8000/storage/assets/backgrounds/bc_01.jpg"
+    "img_path": "assets/background.jpg"
   },
   "columns": [
     {
@@ -13,23 +13,38 @@
         {
           "id": 1,
           "column_id": 1,
-          "name": "Do the demo",
+          "name": "Hello, i'm frello card",
           "members": 0,
           "comments": 0,
           "checklists": 1,
           "cardData": {
             "id": 1,
-            "name": "Do the demo",
+            "name": "Hello, i'm frello card",
             "description": null,
             "members": [],
             "checklists": [
               {
                 "id": 1,
-                "name": "test",
+                "name": "Things to do",
                 "tasks": [
                   {
                     "id": 1,
-                    "name": "test task",
+                    "name": "Try to create a card",
+                    "is_done": true
+                  },
+                  {
+                    "id": 1,
+                    "name": "Try to create a column",
+                    "is_done": false
+                  },
+                  {
+                    "id": 1,
+                    "name": "Try to create a chelist",
+                    "is_done": false
+                  },
+                  {
+                    "id": 1,
+                    "name": "Mark task as done",
                     "is_done": false
                   }
                 ]
@@ -43,7 +58,51 @@
     {
       "id": 2,
       "name": "In process",
-      "cards": []
+      "cards": [
+        {
+          "id": 1,
+          "column_id": 1,
+          "name": "Hello i'm frello list",
+          "members": 0,
+          "comments": 0,
+          "checklists": 1,
+          "cardData": {
+            "id": 1,
+            "name": "Hello i'm frello list",
+            "description": null,
+            "members": [],
+            "checklists": [
+              {
+                "id": 1,
+                "name": "Things to do",
+                "tasks": [
+                  {
+                    "id": 1,
+                    "name": "Try to create a card",
+                    "is_done": true
+                  },
+                  {
+                    "id": 1,
+                    "name": "Try to create a column",
+                    "is_done": false
+                  },
+                  {
+                    "id": 1,
+                    "name": "Try to create a chelist",
+                    "is_done": false
+                  },
+                  {
+                    "id": 1,
+                    "name": "Mark task as done",
+                    "is_done": false
+                  }
+                ]
+              }
+            ],
+            "comments": []
+          }
+        }
+      ]
     },
     {
       "id": 3,

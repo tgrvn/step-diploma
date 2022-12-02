@@ -12,7 +12,7 @@ export default function PopOver({ btnText, content, style, btnStyle }) {
     <div className={styles.popOverWrapp} ref={popOverRef} style={style}>
       <button
         className={styles.button}
-        onClick={() => setVisible(false)}
+        onClick={() => setVisible(!isVisible)}
         style={btnStyle}
       >
         <span className={styles.text}>{btnText}</span>
