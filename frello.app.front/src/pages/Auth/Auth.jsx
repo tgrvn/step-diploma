@@ -1,4 +1,5 @@
 import React, { useEffect } from "react";
+import { DASHBOARD } from "navigation/CONSTANTS";
 import styles from "./Auth.module.scss";
 import left from "../../assets/frello-bc-01.svg";
 import right from "../../assets/frello-bc-02.svg";
@@ -11,7 +12,7 @@ export default function Auth({ child }) {
 
   useEffect(() => {
     if (isLoggedIn) {
-      navigate("/dashboard");
+      navigate(DASHBOARD);
     }
   }, [navigate, isLoggedIn]);
 

@@ -1,0 +1,118 @@
+{
+  "id": 1,
+  "name": "Frello demo",
+  "theme": {
+    "type": "background",
+    "img_path": "assets/background.jpg"
+  },
+  "columns": [
+    {
+      "id": 1,
+      "name": "Що треба зробити",
+      "cards": [
+        {
+          "id": 1,
+          "column_id": 1,
+          "name": "Вітаю, я картка",
+          "members": 0,
+          "comments": 0,
+          "checklists": 1,
+          "cardData": {
+            "id": 1,
+            "name": "Вітаю, я картка",
+            "description": "Перші кроки роботи з карткою",
+            "members": [],
+            "checklists": [
+              {
+                "id": 1,
+                "name": "Що треба спробувати",
+                "tasks": [
+                  {
+                    "id": 1,
+                    "name": "Клікнути по картці",
+                    "is_done": true
+                  },
+                  {
+                    "id": 2,
+                    "name": "Спробувати редагувати назву",
+                    "is_done": false
+                  },
+                  {
+                    "id": 3,
+                    "name": "Також спробувати редагувати опис",
+                    "is_done": false
+                  },
+                  {
+                    "id": 4,
+                    "name": "Ще треба створити новий чекліст",
+                    "is_done": false
+                  },
+                  {
+                    "id": 5,
+                    "name": "Та створити таски у чеклісті",
+                    "is_done": false
+                  },
+                  {
+                    "id": 6,
+                    "name": "Якщо усе зробленно, можно повідмічати таски як зробленні",
+                    "is_done": false
+                  }
+                ]
+              }
+            ],
+            "comments": []
+          }
+        }
+      ]
+    },
+    {
+      "id": 2,
+      "name": "У процессі",
+      "cards": [
+        {
+          "id": 2,
+          "column_id": 2,
+          "name": "Вітаю, я список",
+          "members": 0,
+          "comments": 0,
+          "checklists": 1,
+          "cardData": {
+            "id": 2,
+            "name": "Вітаю, я список",
+            "description": "Робота зі списками",
+            "members": [],
+            "checklists": [
+              {
+                "id": 2,
+                "name": "Що можно зробити",
+                "tasks": [
+                  {
+                    "id": 7,
+                    "name": "Якщо були виконані таски з попередньої картки, можно перетягнути їх у колонку 'DONE'",
+                    "is_done": false
+                  },
+                  {
+                    "id": 8,
+                    "name": "Також можно постворювати нові картки у цьому списці",
+                    "is_done": false
+                  },
+                  {
+                    "id": 9,
+                    "name": "Ще можна змінити місцями ці списки",
+                    "is_done": false
+                  }
+                ]
+              }
+            ],
+            "comments": []
+          }
+        }
+      ]
+    },
+    {
+      "id": 3,
+      "name": "DONE",
+      "cards": []
+    }
+  ]
+}

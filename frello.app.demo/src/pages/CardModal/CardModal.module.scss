@@ -1,0 +1,148 @@
+.modal {
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 999;
+  padding: 0 10px;
+  height: 100vh;
+  width: 100%;
+  background-color: RGBA(33, 33, 33, 0.7);
+  overflow-y: auto;
+  overflow-x: hidden;
+
+  .wrapper {
+    margin: 40px auto;
+    padding: 30px 60px;
+    max-width: 768px;
+    height: max-content;
+    background-color: #f4f5f7;
+    border-radius: 4px;
+    position: relative;
+
+    .head {
+      position: relative;
+      margin-bottom: 20px;
+
+      .close {
+        position: absolute;
+        right: 0;
+        display: block;
+        width: 20px;
+        height: 20px;
+        cursor: pointer;
+
+        &::before {
+          content: "\f00d";
+          font-family: "icomoon";
+          font-size: 24px;
+          font-weight: 100;
+          color: #42526e;
+          transition: filter 0.2s;
+        }
+
+        &:hover::before {
+          filter: brightness(1.2);
+        }
+      }
+
+      &::before {
+        content: "\f2d0";
+        position: absolute;
+        width: 24px;
+        height: 24px;
+        top: 14px;
+        left: -30px;
+        transform: translateY(-50%);
+        font-family: "icomoon";
+      }
+    }
+
+    .content {
+      padding-top: 20px;
+      display: flex;
+      justify-content: space-between;
+      gap: 0 20px;
+
+      @media screen and (max-width: 600px) {
+        flex-wrap: wrap;
+        flex-direction: column-reverse;
+        gap: 20px 0;
+      }
+
+      .main {
+        flex-grow: 1;
+
+        .descr {
+          .descrTitle {
+            display: block;
+            position: relative;
+            margin-bottom: 14px;
+
+            &::before {
+              content: "\f1dd";
+              position: absolute;
+              width: 24px;
+              height: 24px;
+              top: 50%;
+              left: -30px;
+              transform: translateY(-50%);
+              font-family: "icomoon";
+              font-weight: 400;
+            }
+          }
+
+          .descrBody {
+            cursor: pointer;
+          }
+        }
+
+        .chelists {
+          display: flex;
+          flex-direction: column;
+          gap: 40px 0;
+          padding: 40px 0;
+        }
+      }
+
+      .aside {
+        min-width: 170px;
+
+        .nav {
+          display: flex;
+          flex-direction: column;
+          gap: 8px 0;
+
+          @media screen and (max-width: 600px) {
+            flex-direction: row;
+            justify-content: center;
+            align-items: stretch;
+            gap: 0 20px;
+          }
+
+          .navitem {
+            border-radius: 4px;
+            background-color: #eaecf0;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+
+            &:hover {
+              background-color: #e2e4e9;
+            }
+          }
+        }
+      }
+    }
+
+    .loadWrappper {
+      position: absolute;
+      display: flex;
+      justify-content: center;
+      backdrop-filter: blur(10px);
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+    }
+  }
+}

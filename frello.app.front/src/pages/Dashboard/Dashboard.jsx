@@ -1,19 +1,17 @@
 import React, { useEffect, useState } from "react";
 import { useNavigate } from "react-router-dom";
 import { useDispatch, useSelector } from "react-redux";
-import { boards } from "../../slices/dashboard";
-import { useAuthChecker } from "../../hooks/useAuthChecker";
-import BoardCard from "../../components/BoardCard/BoardCard";
-import CreateBoard from "../../components/CreateBoard/CreateBoard";
-import CreateMenu from "../../components/ui/create-menu/CreateMenu";
+import { createBoard } from "slices/board";
+import { boards } from "slices/dashboard";
+import BoardMenu from "components/BoardMenu/BoardMenu";
+import BoardCard from "pages/Dashboard/components/BoardCard/BoardCard";
+import CreateBoard from "pages/Dashboard/components/CreateBoard/CreateBoard";
 import styles from "./Dashboard.module.scss";
-import { createBoard } from "../../slices/board";
 
 export default function Dashboard() {
-  useAuthChecker();
   const navigate = useNavigate();
   const dispatch = useDispatch();
-  const { dash } = useSelector((state) => state.dash);
+  const { dashboardData } = useSelector((state) => state.dash);
   const [isVisinle, setVisible] = useState(false);
 
   useEffect(() => {
@@ -24,8 +22,8 @@ export default function Dashboard() {
     <div className="container section">
       <h5 className="md-text">ВАШІ РОБОЧІ ПРОСТОРИ</h5>
       <div className={styles.cards}>
-        {dash?.boards &&
-          dash?.boards?.map((board) => (
+        {dashboardData?.boards &&
+          dashboardData?.boards?.map((board) => (
             <BoardCard
               event={() => navigate(`/board/${board.id}`)}
               key={board.id}
@@ -34,7 +32,7 @@ export default function Dashboard() {
           ))}
         <CreateBoard event={() => setVisible(true)} />
       </div>
-      <CreateMenu
+      <BoardMenu
         visible={isVisinle}
         setVisible={setVisible}
         event={() => setVisible(false)}
