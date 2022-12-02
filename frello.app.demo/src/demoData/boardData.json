@@ -35,12 +35,12 @@
                   {
                     "id": 2,
                     "name": "Спробувати редагувати назву",
-                    "is_done": true
+                    "is_done": false
                   },
                   {
                     "id": 3,
                     "name": "Також спробувати редагувати опис",
-                    "is_done": true
+                    "is_done": false
                   },
                   {
                     "id": 4,
