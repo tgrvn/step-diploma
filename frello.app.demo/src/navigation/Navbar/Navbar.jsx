@@ -15,7 +15,7 @@ export default function Navbar() {
         <nav className={styles.nav}>
           <a
             className={styles.navItem}
-            href="https://github.com/tgrvn/step-diploma/tree/dev"
+            href="https://github.com/tgrvn/step-diploma"
             target={"_blank"}
           >
             Повний проект на GitHub
