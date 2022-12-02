@@ -2,12 +2,12 @@ import React, { useState } from "react";
 import { useParams } from "react-router-dom";
 import { Droppable, Draggable } from "react-beautiful-dnd";
 import { useDispatch } from "react-redux";
-import { createCard, dropColumn, updateColumn } from "../../slices/board";
+import { createCard, dropColumn, updateColumn } from "slices/board";
 import styles from "./Column.module.scss";
-import Card from "../Card/Card";
-import columnServeice from "../../services/column.service";
-import EditableTitle from "../ui/editable-title/EditableTitle";
-import AddArea from "../AddArea/AddArea";
+import Card from "pages/Board/components/Card/Card";
+import columnServeice from "services/column.service";
+import EditableTitle from "components/ui/editable-title/EditableTitle";
+import AddArea from "components/AddArea/AddArea";
 
 export default function Column({ column, index }) {
   const dispatch = useDispatch();

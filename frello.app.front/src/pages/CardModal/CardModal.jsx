@@ -1,24 +1,19 @@
 import React, { useEffect, useState, useRef } from "react";
 import { useNavigate, useParams } from "react-router-dom";
 import { useSelector, useDispatch } from "react-redux";
-import { useClickOutside } from "../../hooks/useClickOutside";
-import Textarea from "../ui/textarea/Textarea";
-import Button from "../ui/button/Button";
-import EditableTitle from "../ui/editable-title/EditableTitle";
-import Checklist from "../Checklist/Checklist";
-import {
-  card,
-  cardMember,
-  cardUpdateDescr,
-  cardUpdateName,
-} from "../../slices/card";
-import PopOver from "../PopOver/PopOver";
-import MembersMenu from "../MembersMenu/MembersMenu";
+import { useClickOutside } from "hooks/useClickOutside";
+import Textarea from "components/ui/textarea/Textarea";
+import Button from "components/ui/button/Button";
+import EditableTitle from "components/ui/editable-title/EditableTitle";
+import Checklist from "pages/CardModal/components/Checklist/Checklist";
+import { card, cardMember, cardUpdateDescr, cardUpdateName } from "slices/card";
+import PopOver from "components/PopOver/PopOver";
+import MembersMenu from "components/MembersMenu/MembersMenu";
 import styles from "./CardModal.module.scss";
-import Comments from "../Comments/Comments";
-import { deleteCard } from "../../slices/board";
+import Comments from "./components/Comments/Comments";
+import { deleteCard } from "slices/board";
 import { ColorRing } from "react-loader-spinner";
-import ChecklistCreate from "../ChecklistCreate/ChecklistCreate";
+import ChecklistCreate from "components/ChecklistCreate/ChecklistCreate";
 
 export default function CardModal() {
   const dispach = useDispatch();
@@ -30,6 +25,7 @@ export default function CardModal() {
 
   const [title, setTitle] = useState(null);
   const [descr, setDescr] = useState(null);
+  console.log(JSON.stringify(cardData));
 
   useClickOutside(cardRef, () => navigate(-1));
 

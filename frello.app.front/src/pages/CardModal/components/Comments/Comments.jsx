@@ -1,10 +1,10 @@
 import React, { useState } from "react";
 import { useDispatch } from "react-redux";
 import { useParams } from "react-router-dom";
-import { createComment, deleteComment, updateComment } from "../../slices/card";
-import Button from "../ui/button/Button";
-import EditableTitle from "../ui/editable-title/EditableTitle";
-import Textarea from "../ui/textarea/Textarea";
+import { createComment, deleteComment, updateComment } from "slices/card";
+import Button from "components/ui/button/Button";
+import EditableTitle from "components/ui/editable-title/EditableTitle";
+import Textarea from "components/ui/textarea/Textarea";
 import styles from "./Comments.module.scss";
 
 export default function Comments({ comments }) {

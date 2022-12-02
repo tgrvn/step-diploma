@@ -1,20 +1,19 @@
-import React, { useEffect, useState } from "react";
-import Button from "../ui/button/Button";
-import styles from "./Checklist.module.scss";
-import EditableTitle from "../ui/editable-title/EditableTitle";
-import { useRef } from "react";
+import React, { useEffect, useState, useRef } from "react";
+import { useParams } from "react-router-dom";
 import { useDispatch } from "react-redux";
+import Button from "components/ui/button/Button";
+import styles from "./Checklist.module.scss";
+import EditableTitle from "components/ui/editable-title/EditableTitle";
 import {
   createTask,
   deleteCheck,
   deleteTask,
   switchStateTask,
   updateTask,
-} from "../../slices/card";
-import { useParams } from "react-router-dom";
-import Textarea from "../ui/textarea/Textarea";
-import { useClickOutside } from "../../hooks/useClickOutside";
-import Checkbox from "../ui/checkbox/Checkbox";
+} from "slices/card";
+import Textarea from "components/ui/textarea/Textarea";
+import Checkbox from "components/ui/checkbox/Checkbox";
+import { useClickOutside } from "hooks/useClickOutside";
 
 export default function Checklist({ checklist }) {
   const dispatch = useDispatch();

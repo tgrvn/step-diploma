@@ -1,5 +1,10 @@
 import React from "react";
-import { Routes, Route, Navigate, useNavigate } from "react-router-dom";
+import {
+  Routes,
+  Route,
+  Navigate,
+  useLocation,
+} from "react-router-dom";
 import PrivateRoute from "navigation/PrivateRoute";
 import * as paths from "./CONSTANTS";
 import Home from "pages/Home/Home";
@@ -8,11 +13,11 @@ import Singup from "pages/Auth/Components/Singup/Singup";
 import Login from "pages/Auth/Components/Login/Login";
 import Dashboard from "pages/Dashboard/Dashboard";
 import Board from "pages/Board/Board";
-import CardModal from "components/CardModal/CardModal";
+import CardModal from "pages/CardModal/CardModal";
 import Invite from "pages/Invite/invite";
 
 export default function RouterConfig() {
-  const location = useNavigate();
+  const location = useLocation();
   const background = location.state && location.state.background;
 
   return (
@@ -37,15 +42,16 @@ export default function RouterConfig() {
               <Board />
             </PrivateRoute>
           }
-        />
-        <Route
-          path={paths.CARD}
-          element={
-            <PrivateRoute>
-              <CardModal />
-            </PrivateRoute>
-          }
-        />
+        >
+          <Route
+            path={paths.CARD}
+            element={
+              <PrivateRoute>
+                <CardModal />
+              </PrivateRoute>
+            }
+          />
+        </Route>
         <Route
           path={paths.INVITE}
           element={

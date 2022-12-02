@@ -2,7 +2,7 @@ import { createAsyncThunk, createSlice } from "@reduxjs/toolkit";
 import dashService from "../services/dashboard.service";
 
 const initialState = {
-  dash: null,
+  dashboardData: null,
   isLoad: false,
 };
 
@@ -24,7 +24,7 @@ const dashboardSlice = createSlice({
     },
     [boards.fulfilled]: (state, action) => {
       state.isLoad = false;
-      state.dash = action.payload.dash.data;
+      state.dashboardData = action.payload.dash.data;
     },
   },
 });

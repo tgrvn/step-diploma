@@ -1,15 +1,14 @@
 import React from "react";
-import { useSelector } from "react-redux";
-import CreateMenu from "../BoardMenu/BoardMenu";
-import PopOver from "../PopOver/PopOver";
-import UrlInvite from "../UrlInviteMenu/UrlInvite";
-import Button from "../ui/button/Button";
-import MembersMenu from "../MembersMenu/MembersMenu";
-import styles from "./BoardNav.module.scss";
-import { board, excludeUser, updateBoard } from "../../slices/board";
-import boardService from "../../services/board.service";
+import { useSelector, useDispatch } from "react-redux";
 import { useNavigate, useParams } from "react-router-dom";
-import { useDispatch } from "react-redux";
+import CreateMenu from "components/BoardMenu/BoardMenu";
+import PopOver from "components/PopOver/PopOver";
+import UrlInvite from "components/UrlInviteMenu/UrlInvite";
+import Button from "components/ui/button/Button";
+import MembersMenu from "components/MembersMenu/MembersMenu";
+import styles from "./BoardNav.module.scss";
+import { board, excludeUser, updateBoard } from "slices/board";
+import boardService from "services/board.service";
 
 export default function BoardNav() {
   const navigate = useNavigate();
